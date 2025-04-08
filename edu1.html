@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <div id="background-container">
+    <canvas id="backgroundCanvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+  </div>
+  <nav>
+    <div class="container nav-container">
+      <h1 style="font-family: 'Montserrat', sans-serif;">Avanthika's Portfolio</h1>
+      <ul class="nav-links">
+        <li style="font-weight: bold;"><a href="index1.html">Home</a></li>
+        <li style="font-weight: bold;"><a href="about1.html">About</a></li>
+        <li style="font-weight: bold;"><a href="skills1.html">Skills</a></li>
+        <li style="font-weight: bold;"><a href="edu1.html"  class="active">Education</a></li>
+        <li style="font-weight: bold;"><a href="proj1.html">Projects</a></li>
+        <li style="font-weight: bold;"><a href="cont1.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="edu-timeline">
+        <div class="edu-card">
+          <h3>B.Tech in Computer Science (AIML)</h3>
+          <p>Vellore Institute of Technology, Chennai</p>
+          <p>2023 - 2027</p>
+          <p>Current CGPA: 8.24/10</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>Class XII - CBSE</h3>
+          <p>Vidya Mandir Senior Secondary School</p>
+          <p>2022 - 2023</p>
+          <p>Percentage: 93%</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>Class X - CBSE</h3>
+          <p>Vidya Mandir Senior Secondary School</p>
+          <p>2020 - 2021</p>
+          <p>Percentage: 92%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script1.js"></script>
+  <div class="page-transition">
+    <div class="transition-circle"></div>
+    <div class="transition-content">
+      <div class="transition-spinner"></div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.href.includes(window.location.origin)) {
+          e.preventDefault();
+          const target = this.href;
+          document.querySelector('.page-transition').classList.add('active');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 800); // Increased duration for smoother transition
+        }
+      });
+    });
+  </script>
+  <a href="index1.html" class="home-btn" title="Go to Home">
+    <i>⌂</i>
+  </a>
+</body>
+</html>

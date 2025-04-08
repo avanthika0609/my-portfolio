@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <div id="background-container">
+    <canvas id="backgroundCanvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+  </div>
+  <nav>
+    <div class="container nav-container">
+      <h1 style="font-family: 'Montserrat', sans-serif;">Avanthika's Portfolio</h1>
+      <ul class="nav-links">
+        <li style="font-weight: bold;"><a href="index1.html">Home</a></li>
+        <li style="font-weight: bold;"><a href="about1.html">About</a></li>
+        <li style="font-weight: bold;"><a href="skills1.html"  class="active">Skills</a></li>
+        <li style="font-weight: bold;"><a href="edu1.html">Education</a></li>
+        <li style="font-weight: bold;"><a href="proj1.html">Projects</a></li>
+        <li style="font-weight: bold;"><a href="cont1.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2><br>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3>Programming Languages</h3><br><br>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img src="c logo.jpg" alt="C Logo" />
+              <p>C</p>
+            </div>
+            <div class="skill-card">
+              <img src="c-logo-icon-28389.jpg" alt="C++ Logo" />
+              <p>C++</p><br>
+            </div>
+            <div class="skill-card">
+              <img src="java logo.jpg" alt="Java Logo" />
+              <p>Java</p>
+            </div>
+            <div class="skill-card">
+              <img src="python logo.jpg" alt="Python Logo" />
+              <p>Python</p><br>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        
+        <div class="skill-category">
+          <h3>Web Technologies</h3><br><br>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img src="html.jpg" alt="HTML Logo" />
+              <p>HTML</p><br>
+            </div>
+            <div class="skill-card">
+              <img src="css logo 2.jpg" alt="CSS Logo" />
+              <p>CSS</p><br>
+            </div>
+            <div class="skill-card">
+              <img src="javascript.jpg" alt="JavaScript Logo" />
+              <p>JavaScript</p>
+            </div>
+          </div>
+        </div>
+        <br><br>
+
+        <div class="skill-category">
+          <h3>Tools & Technologies</h3><br><br>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img src="git.png" alt="Git Logo" />
+              <p>Git</p>
+            </div>
+            <div class="skill-card">
+              <img src="vscode.png" alt="VSCode Logo" />
+              <p>VS Code</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script1.js"></script>
+  <div class="page-transition">
+    <div class="transition-circle"></div>
+    <div class="transition-content">
+      <div class="transition-spinner"></div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.href.includes(window.location.origin)) {
+          e.preventDefault();
+          const target = this.href;
+          document.querySelector('.page-transition').classList.add('active');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

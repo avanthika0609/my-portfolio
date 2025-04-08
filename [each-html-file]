@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avanthika's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+    <div id="background-container">
+        <canvas id="backgroundCanvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+    </div>
+  <nav>
+    <div class="container nav-container">
+      <h1 style="font-weight: bold;">Avanthika's Portfolio</h1>
+      <ul class="nav-links">
+        <li style="font-weight: bold;"><a href="index1.html" class="active">Home</a></li>
+        <li style="font-weight: bold;"><a href="about1.html">About</a></li>
+        <li style="font-weight: bold;"><a href="skills1.html">Skills</a></li>
+        <li style="font-weight: bold;"><a href="edu1.html">Education</a></li>
+        <li style="font-weight: bold;"><a href="proj1.html">Projects</a></li>
+        <li style="font-weight: bold;"><a href="cont1.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section id="hero">
+    <div class="container hero-container">
+      <div class="profile-pic">
+        <img src="avan.jpg" alt="Avanthika Profile Picture">
+      </div>
+      <div class="hero-content">
+        <h1 class="welcome-text">Hi, I'm Avanthika!</h1>
+        <p class="tagline">AI Enthusiast | Student Developer | Creative Mind</p>
+        <div class="typed-text">I'm passionate about <span id="typed"></span></div>
+        <div class="cta-buttons">
+          <a href="about1.html" class="cta-btn">Know More</a>
+          <a href="cont1.html" class="cta-btn outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quick-intro">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>3+</h3>
+          <p>Programming Languages</p>
+        </div>
+        <div class="stat-card">
+          <h3>5+/</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <h3>2+</h3>
+          <p>Years Coding</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script1.js"></script>
+</body>
+</html>

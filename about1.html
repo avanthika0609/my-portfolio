@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Avanthika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <div id="background-container">
+    <canvas id="backgroundCanvas"></canvas>
+  </div>
+  <nav>
+    <div class="container nav-container">
+      <h1 style="font-family: 'Montserrat', sans-serif;">Avanthika's Portfolio</h1>
+      <ul class="nav-links">
+        <li style="font-weight: bold;"><a href="index1.html">Home</a></li>
+        <li style="font-weight: bold;"><a href="about1.html"  class="active">About</a></li>
+        <li style="font-weight: bold;"><a href="skills1.html">Skills</a></li>
+        <li style="font-weight: bold;"><a href="edu1.html">Education</a></li>
+        <li style="font-weight: bold;"><a href="proj1.html">Projects</a></li>
+        <li style="font-weight: bold;"><a href="cont1.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-card bio">
+          <h3><i class="fas fa-user"></i> Who I Am</h3>
+          <p>I'm Avanthika, a passionate coder and AI enthusiast currently pursuing my Bachelor's in Computer Science with a specialization in Artificial Intelligence and Machine Learning at VIT Chennai.</p>
+        </div>
+
+        <div class="about-card journey">
+          <h3><i class="fas fa-code"></i> My Journey</h3>
+          <p>My journey in technology began with a fascination for problem-solving and has evolved into a deep interest in artificial intelligence and its applications.</p>
+        </div>
+
+        <div class="about-card creativity">
+          <h3><i class="fas fa-paint-brush"></i> Creative Side</h3>
+          <p>As a trained classical dancer, I've learned the importance of discipline and artistic expression. My photography hobby has taught me to capture moments with precision.</p>
+        </div>
+
+        <div class="about-card goals">
+          <h3><i class="fas fa-bullseye"></i> My Goals</h3>
+          <p>I aim to bridge the gap between AI and practical applications, creating solutions that make a meaningful impact on society.</p>
+        </div>
+      </div>
+
+      <div class="highlights-section">
+        <h3>What Drives Me</h3>
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <span class="highlight-icon">💡</span>
+            <h4>Innovation</h4>
+            <p>Always exploring new technologies</p>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🎯</span>
+            <h4>Precision</h4>
+            <p>Detail-oriented approach</p>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🤝</span>
+            <h4>Collaboration</h4>
+            <p>Strong team player</p>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🔄</span>
+            <h4>Adaptability</h4>
+            <p>Quick learner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script1.js"></script>
+  <div class="page-transition"></div>
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.href.includes(window.location.origin)) {
+          e.preventDefault();
+          const target = this.href;
+          document.querySelector('.page-transition').classList.add('active');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 800); // Match CSS transition duration
+        }
+      });
+    });
+  </script>
+</body>
+</html>

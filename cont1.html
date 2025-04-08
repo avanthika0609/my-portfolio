@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <div id="background-container">
+    <canvas id="backgroundCanvas" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+  </div>
+  <nav>
+    <div class="container nav-container">
+      <h1 style="font-family: 'Montserrat', sans-serif;">Avanthika's Portfolio</h1>
+      <ul class="nav-links">
+        <li style="font-weight: bold;"><a href="index1.html">Home</a></li>
+        <li style="font-weight: bold;"><a href="about1.html">About</a></li>
+        <li style="font-weight: bold;"><a href="skills1.html">Skills</a></li>
+        <li style="font-weight: bold;"><a href="edu1.html">Education</a></li>
+        <li style="font-weight: bold;"><a href="proj1.html">Projects</a></li>
+        <li style="font-weight: bold;"><a href="cont1.html"  class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-intro">
+        <p style="font-size: large;">I'm always interested in hearing about new projects and opportunities. Whether you have a </p>
+        <p style="font-size: large;">question or just want to say hi, feel free to get in touch!</p>
+      </div><br><br>
+      <div class="contact-form">
+        <form id="messageForm" onsubmit="return validateForm(event)">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-methods">
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Location</h3>
+          <p>Chennai, Tamil Nadu, India</p>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-clock"></i>
+          <h3>Response Time</h3>
+          <p>Within 24 hours</p>
+        </div>
+      </div>
+      <div class="contact-details">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:venkatavanthika936@gmail.com">venkatavanthika936@gmail.com</a></p>
+        <p><i class="fas fa-phone-alt"></i> +91-9003260192</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/avanthika-venkat-6b019728b/" target="_blank">LinkedIn Profile</a></p>
+      </div>
+      <div class="social-links">
+        <h3>Connect With Me</h3>
+        <div class="social-icons">
+          <a href="https://github.com/avanthika0609" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/avanthika-venkat-6b019728b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:venkatavanthika936@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script1.js"></script>
+  <div class="page-transition">
+    <div class="transition-circle"></div>
+    <div class="transition-content">
+      <div class="transition-spinner"></div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.href.includes(window.location.origin)) {
+          e.preventDefault();
+          const target = this.href;
+          document.querySelector('.page-transition').classList.add('active');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 300);
+        }
+      });
+    });
+  </script>
+  <a href="index1.html" class="home-btn" title="Go to Home">
+    <i>⌂</i>
+  </a>
+</body>
+</html>
